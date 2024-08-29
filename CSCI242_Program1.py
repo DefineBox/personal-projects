@@ -2,6 +2,8 @@
 #push - adds to the top of the list
 #top - removes the top item from the stack
 #peak - returns the top item from the stack
+class ListStackError (Exception):
+    pass
 
 class Liststack:
 
@@ -16,6 +18,7 @@ class Liststack:
             return True
         else:
             return False
+            #raise ListStackError ("Error - pushing into a full stack") 
 
     def peak(self):
         pass
