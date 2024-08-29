@@ -6,12 +6,17 @@
 class Liststack:
 
     def __init__(self, maxSize = 10):
-            self.__stack = [None] * maxSize
-            self.__numOfItems = 0
+        self.__stack = [None] * maxSize
+        self.__numOfItems = 0
 
     def push(self, itemToPush):
-        pass
-    
+        if self.__numOfItems < len(self.__stack):
+            self.__stack[self.__numOfItems] = itemToPush
+            self.__numOfItems += 1
+            return True
+        else:
+            return False
+
     def peak(self):
         pass
     
