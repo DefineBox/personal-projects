@@ -24,8 +24,13 @@ class Liststack:
         pass
     
     def pop(self):
-        pass
+        if self.__numOfItems == 0:
+            itemToReturn = self.__stack[self.__numOfItems - 1]
+            self.__numOfItems -= 1
+            return itemToReturn
             
     def top(self):
         pass
-            
+
+    def Listempty (self):
+        return self.__numOfItems == 0
